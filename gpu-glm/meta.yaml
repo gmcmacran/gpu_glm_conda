@@ -10,14 +10,14 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  copy_test_source_files: true
 
 requirements:
   host:
-    - python >=3.12,<3.13
+    - python
     - pip
+    - setuptools
   run:
-    - python >=3.12,<3.13
+    - python
     - numpy >=2.4.3,<3.0
     - scipy >=1.10,<1.17
     - cupy >=14.0.1,<15.0
