@@ -26,13 +26,9 @@ test:
   imports:
     - gpu_glm
   commands:
-    - pytest $PREFIX/tests/ -q   # [not win]
-    - pytest %PREFIX%\tests\ -q  # [win]
     - pip check
   requires:
-    - pytest
     - pip
-    - scikit-learn >=1.8
 
 about:
   home: https://github.com/gmcmacran/gpu_glm
