@@ -1,11 +1,11 @@
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 package:
   name: gpu-glm
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/g/gpu-glm/gpu_glm-{{ version }}.tar.gz
-  sha256: 2d24e1673eb7bca4792799eb4c11ee6c9ffcd804fa0a6ef5b98efd38763c6db3
+  sha256: cea8eb460fe2ea5d3edb65d3f2405ca37806693dcfd9d5b975262ac5ed52ecfd
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
