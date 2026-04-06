@@ -26,7 +26,8 @@ test:
   imports:
     - gpu_glm
   commands:
-    - pytest $PREFIX/tests/ -q
+    - pytest $PREFIX/tests/ -q   # [not win]
+    - pytest %PREFIX%\tests\ -q  # [win]
     - pip check
   requires:
     - pytest
@@ -36,8 +37,13 @@ test:
 about:
   home: https://github.com/gmcmacran/gpu_glm
   summary: Regularized GLM models running on a GPU.
+  description: |
+    A lightweight Python implementation of Generalized Linear Models (GLMs)
+    that runs on a GPU via CuPy, with a NumPy fallback.
   license: MIT
   license_file: LICENSE
+  doc_url: https://gmcmacran.github.io/gpu_glm/
+  dev_url: https://github.com/gmcmacran/gpu_glm
 
 extra:
   recipe-maintainers:
